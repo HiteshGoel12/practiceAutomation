@@ -42,11 +42,6 @@ exports.config = {
         });
         console.info('The test reports will be stored in:', reporterPath);
 
-        // add test line level console output
-        // jasmine.getEnv().addReporter(new specReporter({
-        //     displayStacktrace: 'all'
-        // }));
-
         jasmine.getEnv().addReporter(new reporters.JUnitXmlReporter({
             'savePath': reporterPath,
             'consolidate': false,

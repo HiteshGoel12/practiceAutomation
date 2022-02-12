@@ -81,7 +81,7 @@ describe('Practice Automation Testing', function() {
         couponCodeInput.clear();
         couponCodeInput.sendKeys(couponCode);
         homePage.getApplyCouponButton().click();
-        // browser.sleep(1000);
+        browser.sleep(1000);
         browser.wait(EC.visibilityOf(homePage.message), 2000);
         expect(homePage.message.getText()).toContain('Coupon code applied successfully.');
     });

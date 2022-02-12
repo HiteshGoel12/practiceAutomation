@@ -20,18 +20,13 @@ var HomePage = function() {
     this.checkoutButton = element(by.css('.checkout-button'));
     this.updateCartButton = element(by.css('[name="update_cart"]'));
     this.message = element(by.css('.woocommerce-message'));
-    var EC = protractor.ExpectedConditions;
 
     this.getCouponCodeInput = function() {
-        var locator = element(by.css('#coupon_code'));
-        // browser.wait(EC.stalenessOf(locator), 2000);
-        return locator;
+        return element(by.css('#coupon_code'));
     };
 
     this.getApplyCouponButton = function() {
-        var locator = element(by.css('[name="apply_coupon"]'));
-        // browser.wait(EC.stalenessOf(locator), 2000);
-        return locator;
+        return element(by.css('[name="apply_coupon"]'));
     };
 };
 
